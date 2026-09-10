@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mantisnet — Professional web design. Landing pages and business websites from $100 USD." />
+  <title>Mantisnet · Web design for small businesses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <header class="nav" role="banner">
+    <div class="nav__logo" aria-label="Mantisnet">
+      <span class="brand-logo brand-logo--light" aria-hidden="true">
+        <img src="img/MantisnetLogo_claro.png" alt="" />
+      </span>
+      <span class="nav__wordmark">Mantis<em>net</em></span>
+    </div>
+
+    <button class="nav__toggle" id="js-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="js-nav-menu">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+
+    <nav class="nav__menu" id="js-nav-menu" aria-label="Main navigation">
+      <a href="#services" class="nav__link">Services</a>
+      <a href="#process"   class="nav__link">Process</a>
+      <a href="#portfolio" class="nav__link">Portfolio</a>
+      <a href="#contact"  class="nav__link">Contact</a>
+      <a href="https://instagram.com/mantisnet" class="nav__cta" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle class="icon__dot" cx="17.5" cy="6.5" r="1"/>
+        </svg>
+        Instagram
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__inner container">
+        <div class="hero__copy">
+          <p class="chip">Web design for small businesses</p>
+          <h1 class="hero__heading" id="hero-heading">
+            Your business deserves a<br>
+            <span class="hero__heading--accent">digital presence that sells</span>
+          </h1>
+          <p class="hero__sub">
+            We create landing pages and websites that turn visitors into customers.<br>
+            Fast, accessible, and hassle-free.
+          </p>
+          <div class="hero__actions">
+            <a href="https://instagram.com/mantisnet" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle class="icon__dot" cx="17.5" cy="6.5" r="1"/>
+              </svg>
+              Follow us on Instagram
+            </a>
+            <a href="#portfolio" class="btn btn--ghost">View portfolio</a>
+          </div>
+        </div>
+        <div class="hero__preview" aria-label="Mantisnet website preview">
+          <div class="hero__browser-bar">
+            <span class="hero__browser-dot"></span>
+            <span class="hero__browser-dot"></span>
+            <span class="hero__browser-dot"></span>
+            <span class="hero__browser-url">tusitio.com</span>
+          </div>
+          <div class="hero__screen">
+            <div class="hero__screen-nav">
+              <span class="hero__screen-logo">M</span>
+              <span class="hero__screen-line hero__screen-line--short"></span>
+              <span class="hero__screen-line"></span>
+            </div>
+            <div class="hero__screen-content">
+              <span class="hero__screen-kicker">Your brand, in motion</span>
+              <span class="hero__screen-title">A website that works<br>for your business.</span>
+              <span class="hero__screen-button">Learn more <b>↗</b></span>
+            </div>
+            <div class="hero__screen-orbit hero__screen-orbit--one"></div>
+            <div class="hero__screen-orbit hero__screen-orbit--two"></div>
+          </div>
+          <div class="hero__preview-note"><span></span> Designed to help you grow</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <p class="chip chip--light">Services</p>
+        <h2 class="section__heading" id="services-heading">
+          Everything your business <span class="text-accent">needs online</span>
+        </h2>
+        <p class="section__sub">Two focused services, made right. Fixed prices.</p>
+
+        <ul class="services" aria-label="Services list">
+
+          <li>
+            <a class="service-card service-card__link" href="#contact" aria-label="Ask about a landing page">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Landing page</h3>
+            <p class="service-card__desc">
+              A clear, effective page that presents your business and captures leads.
+              Custom design, contact form, and mobile version included.
+            </p>
+            <p class="service-card__price">From $150 USD</p>
+            <span class="badge badge--green">Most popular</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="service-card service-card__link" href="#contact" aria-label="Ask about a business website">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3"  y="3"  width="7" height="7"/>
+                <rect x="14" y="3"  width="7" height="7"/>
+                <rect x="3"  y="14" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Business website</h3>
+            <p class="service-card__desc">
+              Up to 5 pages: home, about, services, portfolio, and contact.
+              Ideal for businesses that want a complete, professional presence.
+            </p>
+            <p class="service-card__price">From $300 USD</p>
+            <span class="badge badge--purple">Most complete</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── PROCESS ── -->
+    <section class="section section--alt" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <p class="chip chip--light">How we work</p>
+        <h2 class="section__heading" id="process-heading">
+          From idea to website in <span class="text-accent">5 steps</span>
+        </h2>
+
+        <ol class="process" aria-label="Work process">
+          <li class="process__step">
+            <div class="process__num" aria-hidden="true">1</div>
+            <h3 class="process__title">Consultation</h3>
+            <p class="process__desc">You message us on Instagram and we learn about your business.</p>
+          </li>
+          <li class="process__step">
+            <div class="process__num" aria-hidden="true">2</div>
+            <h3 class="process__title">Proposal</h3>
+            <p class="process__desc">A quote and wireframe within 24 hours.</p>
+          </li>
+          <li class="process__step">
+            <div class="process__num" aria-hidden="true">3</div>
+            <h3 class="process__title">Design</h3>
+            <p class="process__desc">We build the site around your brand identity.</p>
+          </li>
+          <li class="process__step">
+            <div class="process__num" aria-hidden="true">4</div>
+            <h3 class="process__title">Review</h3>
+            <p class="process__desc">Two rounds of changes included.</p>
+          </li>
+          <li class="process__step">
+            <div class="process__num" aria-hidden="true">5</div>
+            <h3 class="process__title">Launch</h3>
+            <p class="process__desc">We help you choose your domain and hosting, or configure the ones you already have.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── PORTFOLIO ── -->
+    <section class="section" id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <p class="chip chip--light">Portfolio</p>
+        <h2 class="section__heading" id="portfolio-heading">
+          Some of our <span class="text-accent">work</span>
+        </h2>
+
+        <ul class="portfolio" aria-label="Selected work">
+
+          <!-- Podología La Devesa -->
+          <li class="portfolio-card">
+            <a class="portfolio-card__link" href="https://podevesa.com/" target="_blank" rel="noopener noreferrer" aria-label="View Podología La Devesa website">
+              <div class="portfolio-card__preview">
+                <img src="img/devesa.png" alt="Podología La Devesa website preview" class="portfolio-card__img" />
+              </div>
+              <div class="portfolio-card__body">
+                <h3 class="portfolio-card__name">Podología La Devesa</h3>
+                <p class="portfolio-card__type">Business website · Girona, Spain</p>
+                <p class="portfolio-card__tags">
+                  <span class="portfolio-tag">HTML</span>
+                  <span class="portfolio-tag">CSS</span>
+                  <span class="portfolio-tag">JS</span>
+                </p>
+              </div>
+            </a>
+          </li>
+
+          <!-- Vikingo -->
+          <li class="portfolio-card">
+            <a class="portfolio-card__link" href="https://solgrana.github.io/VeleroVikingo/" target="_blank" rel="noopener noreferrer" aria-label="View Velero Vikingo website">
+              <div class="portfolio-card__preview">
+                <img src="img/vikingo.png" alt="Velero Vikingo website preview" class="portfolio-card__img" />
+              </div>
+              <div class="portfolio-card__body">
+                <h3 class="portfolio-card__name">Vikingo · Velero San Isidro</h3>
+                <p class="portfolio-card__type">Landing page · Buenos Aires</p>
+                <p class="portfolio-card__tags">
+                  <span class="portfolio-tag">HTML</span>
+                  <span class="portfolio-tag">CSS</span>
+                  <span class="portfolio-tag">JS</span>
+                </p>
+              </div>
+            </a>
+          </li>
+
+          <!-- MantisChef -->
+          <li class="portfolio-card">
+            <a class="portfolio-card__link" href="https://test-mnt-cooking.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View MantisChef website">
+              <div class="portfolio-card__preview">
+                <img src="img/mantischef.png" alt="MantisChef website preview" class="portfolio-card__img" />
+              </div>
+              <div class="portfolio-card__body">
+                <h3 class="portfolio-card__name">MantisChef · Recetas</h3>
+                <p class="portfolio-card__type">Web app · interactive recipe book</p>
+                <p class="portfolio-card__tags">
+                  <span class="portfolio-tag">HTML</span>
+                  <span class="portfolio-tag">CSS</span>
+                  <span class="portfolio-tag">JS</span>
+                  <span class="portfolio-tag">API</span>
+                </p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── CONTACT / FINAL CTA ── -->
+    <section class="cta" id="contact" aria-labelledby="cta-heading">
+      <div class="container cta__inner">
+        <h2 class="cta__heading" id="cta-heading">Ready to get your website?</h2>
+        <p class="cta__sub">
+          Message us on WhatsApp and we will get back to you within 24 hours.<br>
+          No-obligation quote.
+        </p>
+        <div class="cta__actions">
+          <a href="https://wa.me/5491126570529?text=Hello%20Mantisnet%2C%20I%27m%20interested%20in%20your%20web%20design%20services." class="btn btn--white" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.1-5.1A8.5 8.5 0 1 1 21 11.5Z"/>
+              <path d="M8.7 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.5.6c.6 1.1 1.5 2 2.6 2.6l.6-.5c.2-.2.4-.2.7-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1.4.3-2.8-.3-1.4-.6-2.6-1.5-3.6-2.5-1-1-1.9-2.2-2.5-3.6-.6-1.4-.5-2.4-.3-2.8Z"/>
+            </svg>
+            Chat on WhatsApp
+          </a>
+          <a href="mailto:mantisnetdev@gmail.com" class="btn btn--ghost-white">mantisnetdev@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__logo" aria-label="Mantisnet">
+        <span class="brand-logo brand-logo--light" aria-hidden="true">
+          <img src="img/MantisnetLogo_claro.png" alt="" />
+        </span>
+        <span class="footer__wordmark">Mantis<em>net</em></span>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#services" class="footer__link">Services</a>
+        <a href="#portfolio" class="footer__link">Portfolio</a>
+        <a href="#contact"  class="footer__link">Contact</a>
+        <a href="https://instagram.com/mantisnet" class="footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+      <p class="footer__copy">© 2025 Mantisnet · Argentina</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
