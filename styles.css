@@ -206,19 +206,19 @@ button { font-family: inherit; cursor: pointer; }
 
 .brand-logo {
   display: block;
-  width: 38px;
+  width: 48px;
   height: 38px;
   overflow: hidden;
   flex-shrink: 0;
-  border-radius: 8px;
 }
 
 .brand-logo img {
   display: block;
-  width: 78px;
-  height: 78px;
+  width: 53px;
+  height: 38px;
   max-width: none;
-  transform: translate(-20px, -20px);
+  object-fit: contain;
+  transform: translate(-2px, 0);
 }
 
 .nav__wordmark {
