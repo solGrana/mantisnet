@@ -11,6 +11,11 @@
 
 'use strict';
 
+/* ── Configuración ──────────────────────────────────────────────────────── */
+
+/** Pesos argentinos por dólar. Actualizar acá: todos los precios en ARS se recalculan solos. */
+const TIPO_DE_CAMBIO = 1530;
+
 /* ── Módulo: navegación mobile ──────────────────────────────────────────── */
 const NavToggle = (() => {
 
@@ -26,7 +31,7 @@ const NavToggle = (() => {
     const nextState = !isOpen;
 
     toggleEl.setAttribute('aria-expanded', String(nextState));
-    toggleEl.setAttribute('aria-label', nextState ? 'Close menu' : 'Open menu');
+    toggleEl.setAttribute('aria-label', nextState ? 'Cerrar menú' : 'Abrir menú');
     menuEl.classList.toggle(OPEN_CLASS, nextState);
   }
 
@@ -37,7 +42,7 @@ const NavToggle = (() => {
    */
   function close(toggleEl, menuEl) {
     toggleEl.setAttribute('aria-expanded', 'false');
-    toggleEl.setAttribute('aria-label', 'Open menu');
+    toggleEl.setAttribute('aria-label', 'Abrir menú');
     menuEl.classList.remove(OPEN_CLASS);
   }
 
@@ -139,6 +144,46 @@ const RevealOnScroll = (() => {
 })();
 
 
+/* ── Módulo: precios en pesos argentinos ────────────────────────────────── */
+const PreciosARS = (() => {
+
+  const SELECTOR = '[data-ars-usd]';
+
+  /**
+   * Convierte USD a ARS con TIPO_DE_CAMBIO, redondeado a miles.
+   * @param {number} usd
+   * @returns {string} ej. "230.000"
+   */
+  function toARS(usd) {
+    const ars = Math.round((usd * TIPO_DE_CAMBIO) / 1000) * 1000;
+    return ars.toLocaleString('es-AR');
+  }
+
+  function init() {
+    document.querySelectorAll(SELECTOR).forEach((el) => {
+      const usd = Number(el.dataset.arsUsd);
+      /* Si el precio todavía no está definido (ej. "[X]"), deja el texto como está */
+      if (!Number.isFinite(usd) || usd <= 0) return;
+      el.textContent = toARS(usd);
+    });
+  }
+
+  return { init };
+})();
+
+
+/* ── Módulo: año actual en el pie de página ─────────────────────────────── */
+const AnioActual = (() => {
+
+  function init() {
+    const el = document.getElementById('js-year');
+    if (el) el.textContent = String(new Date().getFullYear());
+  }
+
+  return { init };
+})();
+
+
 /* ── Bootstrap ──────────────────────────────────────────────────────────── */
 
 /**
@@ -150,6 +195,8 @@ function init() {
     NavToggle,
     ActiveNavLink,
     RevealOnScroll,
+    PreciosARS,
+    AnioActual,
   ];
 
   modules.forEach((mod) => mod.init());
