@@ -172,6 +172,51 @@ const PreciosARS = (() => {
 })();
 
 
+/* ── Módulo: presupuesto interactivo (sección Precios) ──────────────────── */
+const Presupuesto = (() => {
+
+  const formatoFecha = new Intl.DateTimeFormat('es-AR', {
+    weekday: 'long', day: 'numeric', month: 'long',
+  });
+
+  /**
+   * Devuelve la fecha de hoy + N días, en texto (ej. "martes 11 de noviembre").
+   * @param {number} dias
+   * @returns {string}
+   */
+  function fechaDentroDe(dias) {
+    const fecha = new Date();
+    fecha.setDate(fecha.getDate() + dias);
+    return formatoFecha.format(fecha);
+  }
+
+  /** Escribe en cada panel la fecha estimada de publicación. */
+  function pintarFechas(root) {
+    root.querySelectorAll('[data-days]').forEach((el) => {
+      const dias = Number(el.dataset.days);
+      if (!Number.isFinite(dias) || dias <= 0) return;
+      el.textContent = `Con el contenido listo hoy, puede estar online el ${fechaDentroDe(dias)}.`;
+    });
+  }
+
+  function init() {
+    const root = document.querySelector('.quote');
+    if (!root) return;
+
+    const radios = root.querySelectorAll('input[name="plan"]');
+    const sync = () => {
+      const elegido = root.querySelector('input[name="plan"]:checked');
+      if (elegido) root.dataset.plan = elegido.value;
+    };
+
+    radios.forEach((radio) => radio.addEventListener('change', sync));
+    sync();
+    pintarFechas(root);
+  }
+
+  return { init };
+})();
+
 /* ── Módulo: año actual en el pie de página ─────────────────────────────── */
 const AnioActual = (() => {
 
@@ -196,6 +241,7 @@ function init() {
     ActiveNavLink,
     RevealOnScroll,
     PreciosARS,
+    Presupuesto,
     AnioActual,
   ];
 
